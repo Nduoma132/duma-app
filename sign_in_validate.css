@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --teal: rgb(0, 97, 97);
+  --white: white;
+  --off-white: rgb(247, 247, 247);
+  --grey-shadow: rgb(234, 234, 234);
+  --light-teal: rgb(173, 216, 230);
+  --grey-text: rgb(170, 169, 169);
+  --light-grey: rgb(201, 201, 201);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  background-color: var(--grey-shadow);
+}
+
+.header {
+  padding: 1rem 5rem;
+  background: var(--white);
+  box-shadow: 0 0.5px 10px var(--grey-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header > h1 {
+  margin-right: 2rem;
+  color: var(--teal);
+}
+
+.join {
+  background-color: var(--teal);
+  text-decoration: none;
+  color: var(--white);
+  border-radius: 0.5rem;
+  padding: 0.75rem 2rem;
+  display: inline-block;
+  transition: all 0.5s ease-in;
+}
+
+.join:hover {
+  transform: translateY(-2px);
+}
+
+.sign-in {
+  width: 30rem;
+  margin: 15rem auto;
+  padding: 3rem;
+  border-radius: 0.3rem;
+  box-shadow: 15px 15px 30px var(--grey-text);
+}
+
+.sign-in > h1 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var();
+}
+
+.sign-in > p {
+  margin-bottom: 1rem;
+  color: var(--grey-text);
+}
+
+.info > a {
+  text-decoration: none;
+}
+
+.code,
+.email {
+  padding: 1rem 1.5rem;
+  box-shadow: 10px 10px 20px var(--grey-text), -10px -10px 20px var(--grey-shadow);
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.method {
+  font-size: 1.2rem;
+  color: var(--teal);
+}
+
+.instruction > p {
+    color: var(--grey-text);
+}
+
+
+.icon {
+    margin-right: 1.5rem;
+}
+.arrow {
+
+    margin-left: 1rem;
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+  .header {
+    padding: 1rem 2rem;
+  }
+
+  .header > h1 {
+    margin-right: 0;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+}
+
+@media (max-width: 520px) {
+  .sign-in {
+    width: 100%;
+    padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 426px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .open-acc {
+    padding: 0.75rem 1rem;
+  }
+
+  .sign-in {
+    width: 100%;
+    margin: 5rem auto;
+    padding: 3rem 1rem;
+  }
+
+  .password > a {
+    position: absolute;
+    top: 3.4rem;
+    left: 87.5%;
+  }
+}
+
+@media (max-width: 320px) {
+  .header {
+    gap: 1rem;
+  }
+
+  .header {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --teal: rgb(0, 97, 97);
+  --white: white;
+  --off-white: rgb(224, 224, 224);
+  --grey-shadow: rgb(234, 234, 234);
+  --light-teal: rgb(173, 216, 230);
+  --grey-text: rgb(170, 169, 169);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 1rem 5rem;
+  background: var(--white);
+  box-shadow: 0 0.5px 10px var(--grey-shadow);
+  display: flex;
+  justify-content: space-between;
+}
+
+.header > h1 {
+  color: var(--teal);
+  padding-right: 4rem;
+}
+
+.nav-1 > ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.nav-1 a,
+.nav-2 a {
+  text-decoration: none;
+  padding: 0 1rem;
+  color: var(--grey-text);
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  font-weight: 600;
+}
+
+.nav-1 .pay {
+  color: var(--teal);
+}
+.nav-1 .pay path {
+  stroke: var(--teal);
+}
+
+.nav-2 a {
+  padding: 0;
+}
+
+.icon {
+  margin-right: 0.5rem;
+}
+
+.container {
+  width: 70rem;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.search {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  top: 0.55rem;
+  left: 1rem;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  background-color: var(--grey-shadow);
+  padding-left: 3rem;
+  margin-bottom: 1rem;
+}
+
+.content {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.essentials, .cardless, .lifestyle {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.essentials-box, .cardless-box, .lifestyle-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.essentials-box > a,
+.cardless-box > a,
+.lifestyle-box > a {
+  text-decoration: none;
+    color: var(--teal);
+    font-weight: 600;
+}
+
+.airtime,
+.internet,
+.tv,
+.electricity,
+.solar, .pay-bank, .pay-ussd, .pay-pos, .pay-bus, .betting, .gift-cards, .transport, .education {
+  padding: 1rem 1.5rem;
+  box-shadow: 5px 5px 10px var(--grey-shadow), -5px -5px 10px var(--grey-shadow);
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+}

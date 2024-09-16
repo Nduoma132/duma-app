@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --teal: rgb(0, 97, 97);
+  --white: white;
+  --off-white: rgb(224, 224, 224);
+  --grey-shadow: rgb(234, 234, 234);
+  --light-teal: rgb(173, 216, 230);
+  --grey-text: rgb(170, 169, 169);
+  --red: rgb(218, 0, 0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  background-color: var(--grey-shadow);
+}
+
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.header {
+  padding: 1rem 5rem;
+  background: var(--white);
+  box-shadow: 0 0.5px 10px var(--grey-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header > h1 {
+  margin-right: 2rem;
+  color: var(--teal);
+}
+
+.join {
+  background-color: var(--teal);
+  text-decoration: none;
+  color: var(--white);
+  border-radius: 0.5rem;
+  padding: 0.75rem 2rem;
+  display: inline-block;
+  transition: all 0.5s ease-in;
+}
+
+.join:hover {
+  transform: translateY(-2px);
+}
+
+.sign-in {
+  width: 30rem;
+  margin: 10rem auto;
+  padding: 3.5rem;
+  border-radius: 0.3rem;
+  box-shadow: 15px 15px 30px var(--grey-text);
+}
+
+.sign-in > h1 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.sign-in > p {
+  margin-bottom: 1rem;
+  color: var(--grey-text);
+}
+
+.email,
+.password {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 1rem;
+}
+
+input {
+  padding: 1rem 1.5rem;
+  border-radius: 0.3rem;
+  border: 1px solid var(--grey-shadow);
+  outline: none;
+  box-shadow: 0 5px 3px var(--grey-shadow);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+input.invalid {
+  border: 1px solid var(--red);
+}
+
+.password {
+  position: relative;
+}
+
+.password > a {
+  position: absolute;
+  top: 3.4rem;
+  left: 90%;
+}
+
+.error {
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+  color: var(--red);
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+.sign-in-btn {
+  margin-bottom: 1rem;
+  padding: 0.75rem 3.5rem;
+  border: none;
+}
+
+.sign-in-btn:disabled {
+  background-color: var(--grey-text);
+  color: white;
+  /* cursor: not-allowed; */
+  border: none;
+  /* Makes it look more like it's disabled */
+}
+
+.sign-in-btn:disabled:hover {
+  transform: translateY(0px);
+}
+
+/* Style for the button when it's enabled (green) */
+.sign-in-btn {
+  transition: background-color 1s ease; /* Smooth transition for enabling */
+}
+/* .sign-in-a:hover:not(:disabled) {
+  background-color: darkgreen;
+} */
+
+.forgot,
+.disclaimer {
+  font-size: 0.8rem;
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+  .header {
+    padding: 1rem 2rem;
+  }
+
+  .header > h1 {
+    margin-right: 0;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+}
+
+@media (max-width: 520px) {
+  .sign-in {
+    width: 100%;
+    padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .open-acc {
+    padding: 0.75rem 1rem;
+  }
+
+  .sign-in {
+    width: 100%;
+    margin: 5rem auto;
+    padding: 3rem 1rem;
+  }
+
+  .password > a {
+    position: absolute;
+    top: 3.4rem;
+    left: 87.5%;
+  }
+}
+
+@media (max-width: 320px) {
+  .header {
+    gap: 1rem;
+  }
+
+  .header {
+    padding: 1rem;
+  }
+}
