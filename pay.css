@@ -70,12 +70,13 @@ html {
 .search-bar {
   width: 100%;
   padding: 0.7rem 1rem;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
   border: none;
   outline: none;
   background-color: var(--white);
   padding-left: 3rem;
   margin-bottom: 1rem;
+  font-size: 1rem;
 }
 
 .content {
@@ -97,6 +98,7 @@ html {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .essentials-box > a,
@@ -134,7 +136,7 @@ html {
   .container {
     width: 100%;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem;
   }
 }
 
@@ -143,11 +145,15 @@ html {
 /* TABLET */
 @media (max-width: 769px) {
   .header {
-    padding: 1rem 2rem;
+    padding: 1rem;
   }
 
   .title {
-    margin-left: 1rem;
+    margin-left: 0;
+  }
+
+  .icon {
+    margin-right: 0;
   }
 
   .text {
@@ -171,4 +177,8 @@ html {
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
   }
+}
+
+@media (max-width: 425px) {
+
 }
