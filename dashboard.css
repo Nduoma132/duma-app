@@ -233,6 +233,9 @@ html {
   }
 }
 
+
+
+/* TABLET */
 @media (max-width: 769px) {
   .header {
     display: none;
