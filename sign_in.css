@@ -104,10 +104,18 @@ input.invalid {
   position: relative;
 }
 
-.password > a {
+.toggle-password {
   position: absolute;
   top: 3.4rem;
   left: 90%;
+}
+
+.eye.closed {
+  display: none;
+}
+
+.eye.open {
+  display: inline;
 }
 
 .error {

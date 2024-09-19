@@ -1,10 +1,10 @@
 // const email_input = document.querySelector(".email-input");
-// const email_err = document.querySelector(".email-err");
+const email_err = document.querySelector(".email-err");
 // const password_input = document.querySelector(".password-input");
-// const password_err = document.querySelector(".password-err");
+const password_err = document.querySelector(".password-err");
 // const emailReg = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 // const sign_in_btn = document.querySelector(".sign-in-btn");
-// sign_in_a.href = "./sign_in_validate.html";
+// sign_in_btn.href = "./sign_in_validate.html";
 
 // sign_in_btn.addEventListener('click', () => {
 //   event.preventDefault();
@@ -71,39 +71,58 @@
 //     }
 //   });
 
-
-
 const email_input = document.querySelector(".email-input");
 const password_input = document.querySelector(".password-input");
+const toggle_password = document.querySelector(".toggle-password");
 const sign_in_btn = document.querySelector(".sign-in-btn");
 const emailReg = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 function validateInputs() {
   const emailValid = emailReg.test(email_input.value.trim());
-  const passwordValid = password_input.value.trim() !== "" && !/^\d/.test(password_input.value.trim());
+  const passwordValid =
+    password_input.value.trim() !== "" &&
+    !/^\d/.test(password_input.value.trim());
 
   sign_in_btn.disabled = !(emailValid && passwordValid);
 }
 
-email_input.addEventListener('input', validateInputs);
-password_input.addEventListener('input', validateInputs);
+email_input.addEventListener("input", validateInputs);
+password_input.addEventListener("input", validateInputs);
 
-document.querySelector(".sign-in").addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent form submission
+document.querySelector(".sign-in").addEventListener("submit", function (event) {
+  event.preventDefault();
 
   if (!sign_in_btn.disabled) {
-    // const email = email_input.value.trim();
-    // const password = password_input.value.trim();
-
-    // Simulate a successful login
-    if (email_input.value.trim() === "user@gmail.com" && password_input.value.trim() === "pass") {
-      document.body.classList.add('fade-out');
-
+    if (
+      email_input.value.trim() === "user@gmail.com" &&
+      password_input.value.trim() === "pass"
+    ) {
+      document.body.classList.add("fade-out");
       setTimeout(() => {
-        window.location.href = "./sign_in_validate.html"; // Redirect to dashboard
-      }, 300); // Time matches the CSS transition duration
+        window.location.href = "./sign_in_validate.html";
+      }, 300);
     } else {
       alert("Invalid login");
+      email_err.textContent = "Use 'user@gmail.com' as email address";
+      email_err.classList.add("error");
+
+      password_err.textContent = "Use 'pass' as password";
+      password_err.classList.add("error");
     }
   }
+});
+
+toggle_password.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  if (password_input.getAttribute("type") === "password") {
+    password_input.setAttribute("type", "text");
+    toggle_password.querySelector('.open').style.display = 'none';
+    toggle_password.querySelector('.closed').style.display = 'inline';
+  
+} else {
+    password_input.setAttribute("type", "password");
+    toggle_password.querySelector('.open').style.display = 'inline';
+    toggle_password.querySelector('.closed').style.display = 'none';
+}
 });
