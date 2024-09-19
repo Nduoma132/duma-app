@@ -21,7 +21,7 @@
 //     email_input.classList.add("invalid");
 //     isValid = false;
 //   } else {
-//     email_err.textContent = ""; 
+//     email_err.textContent = "";
 //     email_input.classList.remove("invalid");
 //   }
 
@@ -44,6 +44,35 @@
 //   }
 // });
 
+// const email_input = document.querySelector(".email-input");
+// const password_input = document.querySelector(".password-input");
+// const sign_in_btn = document.querySelector(".sign-in-btn");
+// const emailReg = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+// function validateInputs() {
+//   const emailValid = emailReg.test(email_input.value.trim());
+//   const passwordValid = password_input.value.trim() !== "" && !/^\d/.test(password_input.value.trim());
+
+//   sign_in_btn.disabled = !(emailValid && passwordValid);
+// }
+
+// email_input.addEventListener('input', validateInputs);
+// password_input.addEventListener('input', validateInputs);
+
+// document.querySelector(".sign-in").addEventListener('submit', function(event) {
+//     event.preventDefault(); // Prevent form submission
+
+//     if (!sign_in_btn.disabled) {
+//       document.body.classList.add('fade-out');
+
+//       setTimeout(() => {
+//         window.location.href = "./sign_in_validate.html";
+//       }, 300); // Time matches the CSS transition duration
+//     }
+//   });
+
+
+
 const email_input = document.querySelector(".email-input");
 const password_input = document.querySelector(".password-input");
 const sign_in_btn = document.querySelector(".sign-in-btn");
@@ -59,16 +88,22 @@ function validateInputs() {
 email_input.addEventListener('input', validateInputs);
 password_input.addEventListener('input', validateInputs);
 
-
 document.querySelector(".sign-in").addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
-  
-    if (!sign_in_btn.disabled) {
+  event.preventDefault(); // Prevent form submission
+
+  if (!sign_in_btn.disabled) {
+    // const email = email_input.value.trim();
+    // const password = password_input.value.trim();
+
+    // Simulate a successful login
+    if (email_input.value.trim() === "user@gmail.com" && password_input.value.trim() === "pass") {
       document.body.classList.add('fade-out');
-      
+
       setTimeout(() => {
-        window.location.href = "./sign_in_validate.html";
+        window.location.href = "./sign_in_validate.html"; // Redirect to dashboard
       }, 300); // Time matches the CSS transition duration
+    } else {
+      alert("Invalid login");
     }
-  });
-  
+  }
+});

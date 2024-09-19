@@ -78,10 +78,28 @@ html {
   margin-right: 0.5rem;
 }
 
+.mobile-navigation {
+  display: none;
+}
+
 .container {
   width: 40rem;
   margin: 0 auto;
   padding: 2rem 0;
+}
+
+.join {
+  background-color: var(--teal);
+  text-decoration: none;
+  color: var(--white);
+  border-radius: 0.5rem;
+  padding: 0.75rem 2rem;
+  display: inline-block;
+  transition: all 0.5s ease-in;
+}
+
+.join:hover {
+  transform: translateY(-2px);
 }
 
 .hero {
@@ -236,6 +254,7 @@ html {
     align-items: center;
     gap: 1em;
   }
+
   .hamburger {
     display: block;
     cursor: pointer;
@@ -273,6 +292,56 @@ html {
 
   .text {
     display: none;
+  }
+
+  .mobile-navigation {
+    display: block;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+    width: 100%;
+    height: 100%;
+    background-color: var(--grey-shadow);
+    position: fixed;
+    top:4.3rem;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    visibility: hidden;
+  }
+
+  .mobile-navigation.active {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  .list-1,
+  .list-2 {
+    list-style: none;
+  }
+
+  .list-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .list-1 > li {
+    padding: 1rem;
+  }
+
+  .list-2 > li {
+    border-bottom: 1px solid var(--light-teal);
+    padding: 1rem;
+  }
+
+  ul > li > a {
+    text-decoration: none;
+    color: var(--teal);
+    font-weight: 700;
   }
 
   .container {

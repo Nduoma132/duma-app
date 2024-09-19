@@ -344,6 +344,7 @@ nav > ul > li > a {
     background-color: var(--teal);
     margin: 0.3rem 0;
     border-radius: 2rem;
+    transition: 0.4s ease;
   }
 
   .close .bar1 {
@@ -360,15 +361,25 @@ nav > ul > li > a {
 
   .mobile-navigation {
     display: block;
-    margin: 3.5rem auto;
+    margin: 0 auto;
     padding: 1.5rem 1rem;
     width: 100%;
     height: 100%;
-    background-color: var(--off-white);
+    background-color: var(--grey-shadow);
     position: fixed;
+    top:4.3rem;
     left: 0;
     z-index: 10;
-    display: none;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    visibility: hidden;
+  }
+
+  .mobile-navigation.active {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
   }
 
   .list-1,
