@@ -463,7 +463,6 @@ nav > ul > li > a {
   .transfers,
   .loans {
     padding: 1rem;
-
   }
 
   .get-section {
@@ -493,11 +492,8 @@ nav > ul > li > a {
   }
 
   .get-section {
-
     padding: 3.5rem 1rem;
     border-radius: 0.3rem;
-
-
   }
 }
 
@@ -505,5 +501,4 @@ nav > ul > li > a {
   .lic-ins {
     flex-direction: column;
   }
-
 }
