@@ -105,11 +105,25 @@ document.querySelector(".sign-in").addEventListener("submit", function (event) {
       alert("Invalid login");
       email_err.textContent = "Use 'user@gmail.com' as email address";
       email_err.classList.add("error");
+      // email_err.textContent = "";
 
       password_err.textContent = "Use 'pass' as password";
       password_err.classList.add("error");
+      // password_err.textContent = "";
     }
   }
+
+  email_input.addEventListener('focus', () => {
+    email_err.textContent = ""; 
+    email_input.value = "";
+    email_err.classList.remove("error");
+  });
+  
+  password_input.addEventListener('focus', () => {
+    password_err.textContent = ""; 
+    password_input.value = "";
+    password_err.classList.remove("error");
+  });
 });
 
 toggle_password.addEventListener("click", function (event) {
@@ -126,3 +140,4 @@ toggle_password.addEventListener("click", function (event) {
     toggle_password.querySelector('.closed').style.display = 'none';
 }
 });
+
