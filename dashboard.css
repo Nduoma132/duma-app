@@ -244,6 +244,7 @@ html {
   .mobile-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1rem 2rem;
     box-shadow: 0 0.5px 10px var(--grey-text);
   }
@@ -346,6 +347,7 @@ html {
     text-decoration: none;
     color: var(--teal);
     font-weight: 700;
+    display: block;
   }
 
   .container {
